@@ -1,0 +1,78 @@
+@import "../../../assets/scss/abstracts/abstracts";
+
+.add-user {
+  &__form {
+    form {
+      padding: 2rem 0;
+    }
+    &__content {
+      background: $white-color;
+      margin: 2rem;
+      &__header {
+        background: $primary-color;
+        h1 {
+          padding: 1rem 1.6rem;
+          font-weight: 500;
+          color: $white-color;
+          font-size: 1.9rem;
+        }
+      }
+      &__body {
+        padding: 2rem;
+        label {
+          display: inline-block;
+          margin-bottom: .5rem;
+          font-weight: 400;
+          color: $black-color;
+        }
+        .form-group {
+          margin-bottom: 2.5rem;
+          .mat-form-field-flex {
+            border-bottom: none;
+          }
+        }
+
+        input, select, .mat-form-field-infix {
+          width: 100%;
+          padding: .375rem 0.75rem;
+          font-size: 1.3rem;
+          line-height: 1.5;
+          min-height: 3.8rem;
+          display: initial;
+          background-color: $white-color;
+          background-clip: padding-box;
+          border: 0.1rem solid $light-gray-color;
+          border-radius: .25rem;
+          transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+          &:focus {
+            border: 1px solid $primary-color;
+            outline: none;
+          }
+        }
+        .mat-form-field-infix {
+          line-height: 2.5;
+        }
+        .form-action {
+          button {
+            padding: 1rem 2rem;
+            border: none;
+            margin: 0 2rem;
+            border-radius: .25rem;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 1.4rem;
+            &:focus {
+              outline: none;
+            }
+            &[disabled] {
+              cursor: not-allowed;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+

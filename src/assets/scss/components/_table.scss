@@ -1,0 +1,49 @@
+// --------------------------------------------------------------------------------------
+// ==================================== Table scss file =================================
+// --------------------------------------------------------------------------------------
+
+.table-container {
+  background-color: white;
+  .table-block {
+    table {
+      font-size: 1.4rem;
+      width: 100%;
+      text-align: left;
+      padding-top: 2rem;
+      border-spacing: 0;
+      thead {
+        tr {
+          th {
+            border-bottom: 2px solid #ececec;
+            padding-bottom: 1.2rem;
+            color: #191847;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            padding: 1rem 0;
+            color: #575479;
+            font-size: 15px;
+            i.reset-icon {
+              font-size: 1.7rem;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      tfoot {
+        tr {
+          td {
+            border-top: 2px solid #e6e6e6;
+            padding-top: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+

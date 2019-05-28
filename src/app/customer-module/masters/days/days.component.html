@@ -1,0 +1,64 @@
+<div class="days-container">
+  <!-- add-user start -->
+  <div class="add-user">
+    <div class="add-user__form">
+      <form action="" autocomplete="off">
+        <div class="add-user__form__content">
+          <div class="add-user__form__content__header">
+            <h1>Add Days</h1>
+          </div>
+          <div class="add-user__form__content__body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Festival:</label>
+                  <mat-form-field>
+                    <mat-select value="option">
+                      <mat-option value="option">Holi</mat-option>
+                      <mat-option value="option">Diwali</mat-option>
+                      <mat-option value="option">Navratri</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Start Date</label>
+                  <div class="datepicker">
+                    <mat-form-field>
+                      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>End Date</label>
+                  <div class="datepicker">
+                    <mat-form-field>
+                      <input matInput [matDatepicker]="picker1" placeholder="Choose a date">
+                      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                      <mat-datepicker #picker1></mat-datepicker>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-action">
+                <button type="submit" class="btn-primary ">Save</button>
+                <button type="button" (click)="daysList()" class="btn-orange">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- add-user end -->
+</div>
+

@@ -1,0 +1,29 @@
+<div class="dashboardheader-container">
+  <!-- header start -->
+  <div class="header">
+    <div class="top-header-menu">
+      <h3></h3>
+      <div>
+        <!-- header menu start-->
+          <div class="header__menu">
+            <a class="btn-border-radius btn-primary" mat-raised-button color="primary">
+              <button mat-icon-button [matMenuTriggerFor]="menu">
+                <img src="../../../assets/images/team_3.png">
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                  <span>Setting</span>
+                </button>
+                <button mat-menu-item>
+                  <span>Profile</span>
+                </button>
+                <button mat-menu-item (click)="onLogin()">
+                  <span>Logout</span>
+                </button>
+              </mat-menu>
+            </a>
+          </div>
+          <!-- header menu end -->
+    </div>
+    <!-- header end -->
+</div>

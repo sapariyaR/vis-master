@@ -1,0 +1,40 @@
+<div class="login-page-container">
+  <div class="login-page">
+    <div class="login-page__form">
+    <form [formGroup]="loginForm" (submit)="onSubmit(loginForm)">
+      <div class="form-group">
+            <h2>SSD</h2>
+          </div>
+          <div class="MT-20">
+            <mat-form-field class="example-full-width">
+              <input type="text" matInput placeholder="Email" formControlName="username">
+              <mat-icon matPrefix>email</mat-icon>
+            </mat-form-field>
+            <mat-error *ngIf="isRequiredField(loginForm.get('username'))">{{validationMsg.EMAIL}}</mat-error>
+            <mat-error *ngIf="isValidLength(loginForm.get('username'))">{{validationMsg.EMAIL_LENGTH}}</mat-error>
+          </div>
+
+          <div class="MT-20">
+            <mat-form-field>
+              <mat-icon matPrefix>lock</mat-icon>
+              <input matInput placeholder="Password" formControlName="password" [type]="hidePassword ? 'password' : 'text'">
+              <mat-icon matSuffix (click)="hidePassword = !hidePassword">{{hidePassword ? 'visibility' : 'visibility_off'}}</mat-icon>
+            </mat-form-field>
+            <mat-error *ngIf="isRequiredField(loginForm.get('password'))">{{validationMsg.PASSWORD}}</mat-error>
+            <mat-error *ngIf="isValidField(loginForm.get('password'))">{{validationMsg.VALID_PASSWORD}}</mat-error>
+            <mat-error *ngIf="isValidLength(loginForm.get('password'))">{{validationMsg.PASSWORD_LENGTH}}</mat-error>
+          </div>
+
+          <div class="MT-20">
+            <div class="login-page__form__password">
+              <a [routerLink]="forgotPasswordUrl">Forget Password?</a>
+            </div>
+          </div>
+
+          <div class="MT-40">
+            <button type="submit" class="btn btn-primary btn-block" [disabled]="loginForm.invalid">LOGIN</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>

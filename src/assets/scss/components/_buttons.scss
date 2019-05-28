@@ -1,0 +1,81 @@
+// ---------------------------------------------------------------------------------------------
+// ===================================  button sass file  ======================================
+// ---------------------------------------------------------------------------------------------
+button, html [type=button], [type=reset], [type=submit] {
+  -webkit-appearance: button;
+}
+
+.btn {
+  display: inline-block;
+  padding: .7rem 2rem;
+  margin-bottom: 0;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  outline: 0;
+
+  @include border-radius(0.2rem);
+}
+
+.btn-primary {
+  background: $primary-color;
+  color: $white-color;
+  &:hover {
+    @include leftToRightBgColor(lighten($primary-color, 10%), lighten($primary-color, 10%), $white-color);
+  }
+}
+
+.btn-orange {
+  background: $light-gray-color;
+  cursor: pointer;
+  &:hover{
+    background: $extralight-gray-color;
+  }
+}
+
+.btn-gray {
+  @include bgClr(lighten($light-gray-color, 60%), $gray-color, lighten($light-gray-color, 60%));
+  &:hover {
+    @include bgClr(lighten($light-gray-color, 13%), $gray-color, lighten($light-gray-color, 13%));
+  }
+}
+
+.btn-white {
+  @include bgClr(transparent, $white-color, $white-color);
+  &:hover {
+    @include bgClr(lighten($white-color, 10%), $dark-primary-color, lighten($dark-primary-color, 10%));
+  }
+}
+
+.btn-cancel {
+  @include bgClr(transparent, $black-color, transparent);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-primary[disabled] {
+  background-color: lighten($dark-primary-color, 10%) !important;
+  border-color:transparent !important;
+  cursor: not-allowed;
+}
+
+.btn-primary.btn-bordered {
+  border-color: $dark-primary-color;
+  background: transparent;
+  color: $dark-primary-color;
+}

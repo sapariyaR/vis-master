@@ -1,0 +1,166 @@
+<div class="volunteer-register">
+  <div class="add-user">
+    <div class="add-user__form">
+      <form [formGroup]="registerForm" (submit)="onSubmitRegisterForm(registerForm)">
+        <div class="add-user__form__content">
+          <div class="add-user__form__content__header">
+            <h1>Add Volunteer-registration</h1>
+          </div>
+          <div class="add-user__form__content__body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Mandal ID:</label>
+                  <input type="text" placeholder="Enter mandal id" formControlName="mandalId" (blur)="onBlurMandalId(registerForm.get('mandalId').value)"/>
+                  <div class="validation-msg-container">
+                    <app-validation *ngIf="isRequiredField(registerForm.get('mandalId'))"
+                                    [errMsg]="validationMsg.MANDAL_ID"></app-validation>
+                    
+                    <app-validation *ngIf="isValidField(registerForm.get('mandalId'))"
+                                    [errMsg]="validationMsg.NUMERIC_VALUE"></app-validation>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Mandal:</label>
+                  <input type="text" placeholder="Enter mandal" formControlName="mandalName" readonly/>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Name:</label>
+                  <input type="text" placeholder="Enter name" formControlName="name"/>
+                  <div class="validation-msg-container">
+                    <app-validation *ngIf="isRequiredField(registerForm.get('name'))"
+                                    [errMsg]="validationMsg.NAME"></app-validation>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Form ID:</label>
+                  <input type="text" placeholder="Enter form ID" formControlName="formId">
+                  <div class="validation-msg-container">
+                    <app-validation *ngIf="isRequiredField(registerForm.get('formId'))"
+                                    [errMsg]="validationMsg.FORM_ID"></app-validation>
+                    <app-validation *ngIf="isValidField(registerForm.get('formId'))"
+                                    [errMsg]="validationMsg.NUMERIC_VALUE"></app-validation>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Kshetra:</label>
+                  <input type="text" placeholder="Enter Kshetra" formControlName="kshetraName" readonly/>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Age:</label>
+                  <input type="number" placeholder="Enter age" formControlName="age" />
+                  <div class="validation-msg-container">
+                    <app-validation *ngIf="isRequiredField(registerForm.get('age'))"
+                                    [errMsg]="validationMsg.AGE"></app-validation>
+                    <app-validation *ngIf="isValidField(registerForm.get('age'))"
+                                    [errMsg]="validationMsg.NUMERIC_VALUE"></app-validation>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Contact No:</label>
+                  <input type="text" placeholder="Enter contact number" formControlName="mobile" />
+                  <div class="validation-msg-container">
+                    <app-validation *ngIf="isRequiredField(registerForm.get('mobile'))"
+                                    [errMsg]="validationMsg.CONTACT_NO"></app-validation>
+                    <app-validation *ngIf="isValidField(registerForm.get('mobile'))"
+                                    [errMsg]="validationMsg.NUMERIC_VALUE"></app-validation>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Alternate Contact No:</label>
+                  <input type="text" placeholder="Enter contact number" formControlName="alternateContact" />
+                  <div class="validation-msg-container">
+                    <app-validation *ngIf="isValidField(registerForm.get('alternateContact'))"
+                                    [errMsg]="validationMsg.NUMERIC_VALUE"></app-validation>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Satsang Responsibility:</label>
+                  <input type="number" placeholder="Enter Satsang Responsibility" formControlName="satsangPost"/>
+                  <div class="validation-msg-container">
+                    <app-validation *ngIf="isRequiredField(registerForm.get('satsangPost'))"
+                                    [errMsg]="validationMsg.SATSAND_POST"></app-validation>
+                    <app-validation *ngIf="isValidField(registerForm.get('satsangPost'))"
+                                    [errMsg]="validationMsg.NUMERIC_VALUE"></app-validation>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Speciality Work:</label>
+                  <input type="text" placeholder="Enter Speciality Work" formControlName="specialSkills"/>
+                  <div class="validation-msg-container">
+                    <app-validation *ngIf="isRequiredField(registerForm.get('specialSkills'))"
+                                    [errMsg]="validationMsg.SPECIAL_WORK"></app-validation>
+                    <app-validation *ngIf="isValidField(registerForm.get('specialSkills'))"
+                                    [errMsg]="validationMsg.VALID_VALUE"></app-validation>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Other Works:</label>
+                  <input type="text" placeholder="Enter Other Work" formControlName="otherSkill"/>
+                  <div class="validation-msg-container">
+                    <app-validation *ngIf="isRequiredField(registerForm.get('otherSkill'))"
+                                    [errMsg]="validationMsg.OTHERWORK"></app-validation>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Computer Knowledge:</label>
+                  <input type="number" placeholder="Enter Computer Knowledge" formControlName="computerSkill"/>
+                  <div class="validation-msg-container">
+                    <app-validation *ngIf="isRequiredField(registerForm.get('computerSkill'))"
+                                    [errMsg]="validationMsg.COMPUTER_KNOWLEDGE"></app-validation>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Sevana Divso:</label>
+                <input type="number" placeholder="Enter seva na divso" formControlName="sevaDays"/>
+                <div class="validation-msg-container">
+                  <app-validation *ngIf="isRequiredField(registerForm.get('sevaDays'))"
+                                  [errMsg]="validationMsg.SEVANA_DIVSO"></app-validation>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-12 PL-0">
+              <div class="form-action MT-10">
+                <button type="submit" [disabled]="registerForm.invalid" class="btn-primary">Save</button>
+                <button type="button" class="btn-orange" (click)="volunteerRegistrationList()">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

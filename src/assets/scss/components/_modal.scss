@@ -1,0 +1,162 @@
+// ---------------------------------------------------------------------------------------------
+// ===================================  Modal sass file  ======================================
+// ---------------------------------------------------------------------------------------------
+.modal {
+  position: relative;
+  &.mini-modal {
+    width: 30rem;
+  }
+  &.midium-modal {
+    width: 50rem;
+  }
+  &.large-modal {
+    width: 80rem;
+  }
+  &__close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.8rem;
+    font-size: 2rem;
+    color: $white-color;
+    cursor: pointer;
+  }
+  &__header {
+    border-bottom: .1rem solid $dark-primary-color;
+    background-color: $dark-primary-color;
+    padding: 1.5rem;
+    color: $white-color;
+    min-height: 6rem;
+    h3 {
+      padding-bottom: 1rem;
+      font-weight: 500;
+      color: $dark-primary-color;
+    }
+    &__logo {
+      line-height: 3rem;
+      font-size: 2rem;
+      mat-icon {
+        position: relative;
+        top: .6rem;
+        margin-left: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__body {
+    margin: 1rem 0;
+    padding: 2rem;
+    //padding: 1.5rem;
+    max-height: 85vh;
+    overflow: auto;
+    h3{
+      font-weight: 500;
+    }
+  }
+
+  &__footer {
+    margin: 0 0 2rem 0;
+    text-align: center;
+    padding-top: 1rem;
+    button {
+      padding: 0.6rem 3rem;
+    }
+  }
+}
+
+/**
+* Different dialog size
+*/
+.symptons-dialog-container {
+  max-width: 45vw !important;
+  .mat-dialog-container {
+    padding: 0;
+  }
+}
+
+/**
+* Responsive Design Started
+*/
+@include respond(big-desktop) {
+  .modal {
+    &.large-modal {
+      width: 80rem;
+    }
+    &__close {
+      //right: 0;
+    }
+    &__header {
+      h3 {
+      }
+    }
+    &__body {
+      padding: 1.5rem 1rem
+    }
+    &__footer {
+    }
+  }
+}
+
+@include respond(tab-port) {
+  .modal {
+    width: 90%;
+    &.large-modal {
+      width: 90%;
+    }
+    &__close {
+      right: 1.2rem;
+    }
+    &__header {
+      h3 {
+      }
+    }
+    &__body {
+      padding: 1.5rem 1rem;
+    }
+    &__footer {
+    }
+  }
+}
+
+@include respond(tab-land) {
+  .modal {
+    width: 90%;
+    &.large-modal {
+      width: 90%;
+    }
+    &__close {
+      right: 1.2rem;
+    }
+    &__header {
+      h3 {
+      }
+    }
+    &__body {
+      padding: 1.5rem 1rem;
+    }
+    &__footer {
+    }
+  }
+}
+
+@include respond(phone) {
+  .modal {
+    width: 97%;
+    &.large-modal {
+      width: 97%;
+    }
+    &__close {
+      right: 0.5rem;
+    }
+    &__header {
+      h3 {
+      }
+    }
+    &__body {
+      padding: 1.5rem 1rem;
+      max-height: 82vh;
+    }
+    &__footer {
+    }
+  }
+}

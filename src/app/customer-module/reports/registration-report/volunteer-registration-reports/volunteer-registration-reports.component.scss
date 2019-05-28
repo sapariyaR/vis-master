@@ -1,0 +1,9 @@
+.volunteer-register-report{
+  .form-action{
+    float: right;
+    margin: 0.5rem 2rem;
+  }
+  td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type, th.mat-header-cell:first-of-type {
+    padding-left: 4.5rem;
+  }
+}

@@ -1,0 +1,53 @@
+// ---------------------------------------------------------------------------------------------
+// ===================== Common Variables for color / fonts and Dimension  =====================
+// ---------------------------------------------------------------------------------------------
+
+//
+// Font family variables
+//
+$font-family: 'Montserrat', sans-serif;
+
+//
+// Color Variables
+//
+$white-color: #fff;
+$black-color: #212121;
+$dark-black-color:#191b1f;
+$dark-primary-color: #436eb6;
+$light-blue-color:#398bf7;
+$extrablue-color:#99abb4;
+$blue-color:#455a64;
+
+$light-primary_color:#bcccdf;
+$primary-color: #539ef9;
+$light-color: #B3E5FC;
+$red-color: red;
+
+$gray-color:#808080;
+$light-gray-color:#e0e1e4;
+$extralight-gray-color:#eaecf0;
+
+$green-color: green;
+$white-tranparent-color:rgba(0, 0, 0, 0.3);
+$orange-color: #ff5722;
+$light-orange-color: #e67e22;
+$turquoise-color:#1abc9c;
+$wet-asphalt-color: #34495e;
+
+$asbestos-color:#7f8c8d;
+$inner-grid-color: #F9F9FB;
+$delete-icon-color:#e74c3c;
+$yellow-color:#c5c514;
+$green-color:#45a69e;
+$pageBg-color:#f8f8f8;
+//
+// Colors Array
+//
+$colors: $red-color $primary-color $turquoise-color $light-orange-color $wet-asphalt-color;
+
+$invoiceStatusList: $primary-color $wet-asphalt-color $turquoise-color $light-orange-color ;
+
+//
+// Spinner Variables
+//
+$spinner-dimensions: 5rem;

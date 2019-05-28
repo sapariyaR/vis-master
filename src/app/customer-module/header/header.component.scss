@@ -1,0 +1,20 @@
+@import "../../../assets/scss/abstracts/abstracts";
+.dashboardheader-container{
+  .header {
+    &__menu {
+      text-align: right;
+      .btn-primary {
+        width: 0;
+        height: 0;
+        box-shadow: none;
+      }
+      button {
+        background: transparent;
+        img {
+          max-width: 3rem;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

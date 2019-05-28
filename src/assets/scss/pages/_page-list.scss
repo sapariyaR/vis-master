@@ -1,0 +1,29 @@
+.list-page-container {
+  padding: 10px;
+  .table-header {
+    background-color: #f1f1f1;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    h2{
+      font-weight: 500;
+      padding-top: 10px;
+    }
+  }
+  table{
+    tbody{
+      tr{
+        td{
+          mat-icon{
+            &:hover
+            {
+              color: $gray-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  .mat-elevation-z8 {
+    box-shadow: 0 0px 0px 0px rgba(0, 0, 0, .2), 0 0px 0px 0px rgba(0, 0, 0, .14), 0 0px 0px 0px rgba(0, 0, 0, .12) !important;
+  }
+}

@@ -1,0 +1,61 @@
+<div class="department-list-container list-page-container">
+  <div class="row table-header">
+    <div class="col-md-6">
+      <h2>Volunteer Registration List</h2>
+    </div>
+
+    <div class="col-md-6 text-right">
+      <button type="button" class="btn btn-primary" (click)="VolunteerRegistration()">Add Volunteer</button>
+    </div>
+  </div>
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="srno">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Sr No</th>
+      <td mat-cell *matCellDef="let element"> {{element.srno}}</td>
+    </ng-container>
+
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name</th>
+      <td mat-cell *matCellDef="let element"> {{element.name}}</td>
+    </ng-container>
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="mandalregno">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Mandal Reg No</th>
+      <td mat-cell *matCellDef="let element"> {{element.mandalregno}}</td>
+    </ng-container>
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="mandalregname">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Mandal Reg Name</th>
+      <td mat-cell *matCellDef="let element"> {{element.mandalregname}}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="kshetra">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Kshetra</th>
+      <td mat-cell *matCellDef="let element"> {{element.kshetra}}</td>
+    </ng-container>
+
+
+
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Action</th>
+      <td mat-cell *matCellDef="let element">
+        <mat-slide-toggle></mat-slide-toggle>
+        <mat-icon class="ML-10">edit</mat-icon>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator length="50" [pageSize]="30"></mat-paginator>
+</div>
+

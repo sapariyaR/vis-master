@@ -1,0 +1,114 @@
+// --------------------------------------------------------------------------------------
+// ================================== Sidenav scss file =================================
+// --------------------------------------------------------------------------------------
+
+.sidenav-header-container {
+  height: 100%;
+  .sidenav {
+    width: 26rem;
+  }
+  .mat-drawer-side {
+      border-right:none
+  }
+  .mat-drawer-inner-container {
+    -webkit-overflow-scrolling: touch;
+    background:  $white-color;
+    border-right: 1px solid #ccc;
+  }
+
+  .mat-drawer-content{
+    overflow: inherit;
+    &.mat-sidenav-content {
+      .mat-toolbar.mat-toolbar-single-row {
+        background-color:#fff;
+        border-bottom: 2px solid $light-gray-color;
+        color: $black-color;
+        position: relative;
+        height: 5.5rem;
+      }
+    }
+  }
+
+
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+  }
+
+  .sidenav-container {
+    .user-details-body {
+      text-align: center;
+      line-height: 2.3rem;
+      h3 {
+        font-size: 2rem;
+        font-weight: 500;
+        margin: 5rem 0 2rem 0;
+        @include leftToRightColor($primary-color, darken($dark-primary-color, 10%));
+      }
+      img {
+
+      }
+      .name {
+        color: $primary-color;
+        font-size: 1.6rem;
+      }
+      .phone-number {
+        color: $gray-color;
+      }
+      .date {
+        color: $gray-color;
+      }
+    }
+
+      .mat-nav-list .mat-list-item {
+        cursor: pointer;
+        outline: 0;
+        height: 35px;
+      }
+
+    .mat-nav-list {
+      .mat-list-item {
+        .mat-list-item-content {
+          padding: 0.5rem 1.9rem;
+          color:$dark-black-color;
+          font-family: $font-family;
+          font-size: 15px;
+          font-weight: 500;
+          border-left: .4rem solid transparent;
+          display: block;
+          position: relative;
+          mat-icon {
+            color:$dark-black-color;
+            font-size: 20px;
+            vertical-align: middle;
+            line-height: 24px;
+
+          }
+          mat-icon.mat-suffix {
+            position: absolute;
+            right: 0;
+            top: 0.3rem;
+          }
+        }
+        &.active {
+          .mat-list-item-content {
+            border-left: .4rem solid $dark-primary-color;
+            mat-icon {
+              @include leftToRightColor($primary-color, $dark-primary-color);
+              &:last-child {
+                display: block;
+                display: inline-block;
+                font-size: 2.1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  app-header {
+    width: 100%;
+  }
+
+}
